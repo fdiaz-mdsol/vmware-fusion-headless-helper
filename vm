@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# vmrun with fusion shits me up the wall.
-# i took a deep breath, 2 vodka redbulls and bashed it.
-
-VMRUN="/Applications/VMware Fusion.app/Contents/Public/vmrun"
 VMDIR="$HOME/Documents/Virtual Machines.localized"
 
 ACTION=$1
@@ -21,7 +17,7 @@ function vmrun_start
 		exit
 	fi
 	echo "Starting $VMNAME..."
-	"$VMRUN" -T ws start "$VM" nogui
+	"$VMRUN" start "$VM" nogui
 }
 
 function vmrun_suspend
